@@ -5,9 +5,11 @@ The purpose of this project is to demonstrate the ability to collect, work with,
 
 It has been required to submit: 
 
-1) a tidy data set as described below (tidydataset.txt), 
-2) the script run_analysis.R, which allows the analysis of the data set and its transformation into the tidy data set in point 1). 
-3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. 
+	1) a tidy data set as described below (tidydataset.txt), 
+	
+	2) the script run_analysis.R, which allows the analysis of the data set and its transformation into the tidy data set in point 1). 
+	
+	3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. 
 
 README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 
