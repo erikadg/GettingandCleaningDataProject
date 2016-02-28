@@ -33,9 +33,28 @@ In the data we can find:
                    file name: filteredMeanStdSet, 10299 obs. x 66 variables
 
 4. USE DESCRIPTIVE NAMES FOR ACTIVITY
-Before we read the data in subject_train.txt and subject_test.txt and concatenate them by row, and set the name.
-The same has been done for the activities in y_train.txt and y_test.txt. 
+Before we read the data in subject_train.txt and subject_test.txt and concatenate them by row (AllSubjects), and set the name,
+"Subject". The same has been done for the activities in y_train.txt and y_test.txt (AllLabels), name column "Activity". 
 
   - cbind()       Concatenate the filtered file filteredMeanStdSet, AllLabels ('Activity'), AllSubjects ('Subject') by column 
               10299 obs. x 68 variables
+Read the 'activities_labels', 6 obs per 2 variables, nr.1 corresponds to Walking activity, nr.2 Walking_upstairs, etc.
+  - factor_activity   is the vector that describes the Activity in AllMeasures encoded as a factor
+  - levels(factor_activity) The activity labels are associated to the level attribute of factor_activity variable
+  - Finally the Activity variable is described by descriptive names. 
+ 
+5.  DESCRIPTIVE VARIABLE NAMES
+The ID names of the variables are explicited by replacing the abbreviated name through gsub()
+
+6. CREATION OF AN INDIPENDENT TIDY DATA SET
+Necessary the use of reshape2 library.
+
+  - melt()  The long-data format, newData file, is obtained by melting the AllMeasures data set, "Activity" and "Subject"
+        are the ID variables, which identify individual rows of data.
+  - dcast() uses a formula to describe the shape of data. It shapes newData into a wide-format tidy_data, in which the average 
+        of each variable for each activity and subject.
+  - tidydataset.txt the indipendent tidy data set
+
+
+
 
