@@ -74,5 +74,5 @@ tail(newData)
 ## cast the newData cast(data, formula, fucntion)
 tidy_data <- dcast(newData, Activity + Subject ~ variable, mean)
 # write the data set in a txt file
-write.table(tidy_data, "tidydataset.txt", sep="\t")
+write.table(tidy_data, "tidydataset.txt", sep="\t", row.names = FALSE)
 
